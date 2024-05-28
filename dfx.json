@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "dcurve_backend": {
+      "main": "src/dcurve_backend/main.mo",
+      "type": "motoko"
+    },
+    "dcurve_frontend": {
+      "dependencies": [
+        "dcurve_backend"
+      ],
+      "source": [
+        "src/dcurve_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "dcurve_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
