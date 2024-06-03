@@ -19,15 +19,9 @@
   "defaults": {
     "build": {
       "args": "",
-      "packtool": "",
-      "timeout": 600000
+      "packtool": ""
     }
   },
   "output_env_file": ".env",
-  "version": 1,
-  "networks": {
-    "ic": {
-      "providers": ["https://ic0.app"]
-    }
-  }
+  "version": 1
 }
