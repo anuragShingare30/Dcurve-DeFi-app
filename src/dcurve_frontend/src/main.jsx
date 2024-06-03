@@ -1,10 +1,54 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.scss';
+import App from './components/App';
+// import { AuthClient } from "@dfinity/auth-client";
+import './index.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+
+// THIS IS CODE FOR AUTHENTICATION USING INTERNET IDENTITY.
+let init = async () => {
+
+  // HERE WE HAVE CREATED NEW 'authClient' OBJECT TO LOGIN OIR USER.
+  let authClient = await AuthClient.create();
+
+  
+  // IF USER IS ALREADY AUTHENTICATED, THEY WILL BE DIRECTLY RENDER TO OUR FRONTEND.
+  if(await authClient.isAuthenticated()){
+    // 'isAuthenticated()' METHOD WILL CHECK WHETHER USER IS ALREADY AUTHENTICATED OR NOT. 
+    handleAuthenticated(authClient);
+  }
+  // ELSE IF USER IS AUTHENTICATING FOR FIRST TIME, THEN LOGIN PAGE WILL BE RENDER TO USER.
+  else{
+    await authClient.login({
+      identityProvider : "https://identity.icp0.io/#authorize",
+      onSuccess:()=>{
+        handleAuthenticated(authClient);
+      }
+    });
+  };
+
+  // THIS ASYNC FUNCTION WILL RENDER OUR REACT FRONTEND WHENEVER IS CALLED.
+  async function handleAuthenticated(authClient){
+    var authenticatedIdentity = await authClient.getIdentity(); 
+    var principalId = authenticatedIdentity._principal.toString();
+    console.log(principalId);
+    ReactDOM.createRoot(document.querySelector(".root")).render(
+      <App userId={principalId}></App>
+    );
+  };
+
+};
+
+init();
+
+
+
+
+
+
+
+
+
+
+
+ 

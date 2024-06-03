@@ -12,15 +12,22 @@
         "src/dcurve_frontend/dist"
       ],
       "type": "assets",
-      "workspace": "dcurve_frontend"
+      "workspace": "dcurve_frontend",
+      "candid": "src/dcurve_frontend/assetstorage.did"
     }
   },
   "defaults": {
     "build": {
       "args": "",
-      "packtool": ""
+      "packtool": "",
+      "timeout": 600000
     }
   },
   "output_env_file": ".env",
-  "version": 1
+  "version": 1,
+  "networks": {
+    "ic": {
+      "providers": ["https://ic0.app"]
+    }
+  }
 }

@@ -1,0 +1,131 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #00090f;
+  /* background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.header{
+  width: 100%;
+  /* height: 100px; */
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+.header .headInfo{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 99%;
+  padding: 5px;
+  /* background-color: red; */
+}
+.header .nav_list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 35px;
+}
+.nav_list li{
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+@media screen and (max-width:520px) {
+  .header .nav_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 10px;
+  }
+  
+}
+.transferToken{
+  margin: 40px 40px;
+}
+.btn {
+  padding: 8px;
+  color: white;
+  font-weight: 800;
+  font-size: 15px;
+  border: 1px solid #1763fd;
+  background-color: #1763fd;
+  box-shadow: 3px 3px 0 #153c8a;
+  margin: 15px 15px;
+  transition: all 0.3s ease;
+}
+
+.btn:active {
+  animation: clickAnimation 0.3s cubic-bezier(0.07, -0.01, 0.96, 0.98);
+}
+
+@keyframes clickAnimation {
+  0% {
+    transform: scale(1);
+    box-shadow: 3px 3px 0 #153c8a;
+  }
+  50% {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 0 #153c8a;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 3px 3px 0 #153c8a;
+  }
+}
+
+.claim{
+  margin: 40px 40px;
+  /* border: 1px solid red; */
+  color: white; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 20px; */
+  padding: 20px;
+}
+.check{
+  margin: 40px 40px;
+  /* border: 1px solid white; */
+  color: white; 
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  padding: 10px;
+}
+.foot{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* height: 50px; Adjust as needed */
+  color: rgb(80 80 80);
+  text-align: center;
+  /* margin: 20px 20px; */
+}
+
+@media screen and (max-width:720px) {
+  
+  .transferToken .transferContent{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .img{
+    transform: rotate(90deg);
+  }
+}
