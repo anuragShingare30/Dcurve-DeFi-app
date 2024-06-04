@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import { Head } from './Header';
 import { Transfertoken } from './Transfer';
 import { Claimfaucet } from './Faucet';

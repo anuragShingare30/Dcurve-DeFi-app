@@ -10,7 +10,7 @@ let header = {
   display:"flex",
   justifyContent:"center",
   borderTopRightRadius:"20px",
-  borderTopLeftRadius:"20px",
+  borderTopLeftRadius:"20px", 
    borderBottom:"1px solid white"
 };
 let content = {

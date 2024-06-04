@@ -2,7 +2,7 @@ import React from "react";
 import { createActor, canisterId, dcurve_backend } from "../../../declarations/dcurve_backend";
 import { AuthClient } from "@dfinity/auth-client";
 import "../index.css"
-import { Opacity } from "@mui/icons-material";
+
 let style = { 
     margin:"0px"
 };
