@@ -63,3 +63,9 @@ If you are hosting frontend code somewhere without using DFX, you may need to ma
 == DCurve promises secure and transparent authentication to their user with ICP internet identity authentication without any email verification process.
 == The crypto transfer functionality is built on ICP Canister Smart contract and to ensure the secure transfer of crypto tokens with other users it is deployed on live ICP blockchain.
 == The user friendly frontend is built using ReactJS.
+
+
+== Dkeeper note app is a fullstack note taking app similar to the google notes.
+== This app is build on ICP Canister Smart contracts and Deployed on ICP blockchain.
+== ICP provides the safety of the user during authentication.
+== Check out the live app on: https://pclue-iiaaa-aaaan-qmmca-cai.icp0.io/
